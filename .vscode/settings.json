@@ -58,7 +58,9 @@
       "xtree": "cpp",
       "xutility": "cpp",
       "stdlib.h": "c",
-      "string.h": "c"
+      "string.h": "c",
+      "array": "cpp",
+      "functional": "cpp"
     },
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "aiXcoder.showTrayIcon": true,
