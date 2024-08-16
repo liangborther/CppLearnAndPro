@@ -10,6 +10,7 @@ public:
     virtual void update(const string& message_form_subject) = 0;
     
 };
+
 class ISubject {
 public:
     virtual ~ISubject(){}
@@ -17,6 +18,7 @@ public:
     virtual void detach(shared_ptr<IObserver> observer) = 0;
     virtual void notify() = 0;
 };
+
 class subject : public ISubject{
 private:
     list<shared_ptr<IObserver>> mListObservers;
@@ -40,6 +42,7 @@ public:
         notify();
     }
 };
+
 class observer : public IObserver{
 private:
     string mMessageFromSubject;
@@ -60,6 +63,7 @@ public:
         mSubject.get()->detach(make_shared<observer>(*this));
     }
 };
+
 int observer::mStaticNumber = 2;
 
 void clientCode() {

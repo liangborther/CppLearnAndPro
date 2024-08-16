@@ -7,6 +7,7 @@ int main()
     const int *p = &x;
     int t = 10;
     const int *p2 = &t;
+    const int *const p3;
     p = p2;
     x = 20;
     cout<< *p<<endl;

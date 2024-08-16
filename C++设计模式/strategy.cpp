@@ -10,6 +10,7 @@ public:
 virtual ~strategy(){}
 virtual string doAlgorithm(const vector<string> &v) = 0;
 };
+
 class context{
 private:
 shared_ptr<strategy> mStrategy;
@@ -24,6 +25,7 @@ void doSomeBusinessLogic() const{
     cout<<mStrategy.get()->doAlgorithm({"x","b","c"})<<endl;
 }
 };
+
 class concreteStrategyA : public strategy{
 public:
     string doAlgorithm(const vector<string>& v) override{
@@ -32,6 +34,7 @@ public:
         return res;
     }
 };
+
 class concreteStrategyB : public strategy{
 public:
     string doAlgorithm(const vector<string>& v) override{
