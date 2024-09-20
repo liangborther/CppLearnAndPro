@@ -1,16 +1,26 @@
 #include <vector>
 #include <iostream>
 using namespace std;
+class A{
+public:
+    void test() const{
+        cout<<"Ac"<<endl;
+    }
+    void test(){
+        cout<<"A"<<endl;
+    }
+    virtual ~A(){}
+};
+class B : public A{
+    void test(){
+        cout<<"B"<<endl;
+    }
+};
 int main()
 {
-    int x = 10;
-    const int *p = &x;
-    int t = 10;
-    const int *p2 = &t;
-    const int *const p3;
-    p = p2;
-    x = 20;
-    cout<< *p<<endl;
+    const A* a = new B();
+    a->test();
+    delete a; 
 }
 int calPoints(vector<string>& operations) {
     string s[1005];

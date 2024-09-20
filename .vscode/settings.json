@@ -60,7 +60,15 @@
       "stdlib.h": "c",
       "string.h": "c",
       "array": "cpp",
-      "functional": "cpp"
+      "functional": "cpp",
+      "cstdarg": "cpp",
+      "cwctype": "cpp",
+      "list": "cpp",
+      "memory_resource": "cpp",
+      "numeric": "cpp",
+      "optional": "cpp",
+      "string_view": "cpp",
+      "numbers": "cpp"
     },
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "aiXcoder.showTrayIcon": true,
